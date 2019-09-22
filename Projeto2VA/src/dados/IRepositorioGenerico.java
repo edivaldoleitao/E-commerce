@@ -15,5 +15,7 @@ public interface IRepositorioGenerico<T> {
     void remover(T obj) throws ElementoNaoExisteException;
 
     void atualizar(T newObj) throws ElementoNaoExisteException;
+    public int getSize();
+    public void inserirR(T novoObj);
 
 }

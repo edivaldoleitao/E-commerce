@@ -5,10 +5,9 @@ import java.io.Serializable;
 
 
 
-public class ContaUsuario implements Serializable {
+public abstract class ContaUsuario implements Serializable {
 
     private String Nome;
-    
     private String senha; 
     
 

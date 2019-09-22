@@ -20,7 +20,7 @@ public class RepositorioFileUtil {
             fis = new FileInputStream(in);
             ois = new ObjectInputStream(fis);
             
-            // Se alguma exceção ocorrer, um objeto NULL será retornado
+            
             instanciaLocal = ois.readObject();
         } catch (Exception e) {
             System.out.println("Não há arquivo com o nome '" + filename + "' para ser processado. Um novo arquivo será criado");

@@ -36,7 +36,14 @@ public class RepositorioGenerico<T> implements IRepositorioGenerico<T> {
         
         RepositorioFileUtil.salvarArquivo(elementos, this.filename);
     }
-
+    
+    public void inserirR(T novoObj){
+        
+        this.elementos.add(novoObj); 
+        RepositorioFileUtil.salvarArquivo(elementos, this.filename);
+    }
+    
+    
     @Override
     public List<T> listar() {
         return Collections.unmodifiableList(this.elementos);
@@ -54,7 +61,7 @@ public class RepositorioGenerico<T> implements IRepositorioGenerico<T> {
         RepositorioFileUtil.salvarArquivo(elementos, this.filename);
     }
 
-    
+
     @Override
     public void atualizar(T newObj) throws ElementoNaoExisteException {
         if (this.elementos.contains(newObj)) {
@@ -67,6 +74,9 @@ public class RepositorioGenerico<T> implements IRepositorioGenerico<T> {
         RepositorioFileUtil.salvarArquivo(elementos, this.filename);
     }
     
+    public int getSize() {
+        return this.elementos.size();
+    }
 }
 
 
