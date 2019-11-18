@@ -6,18 +6,18 @@ import projeto2va.negocio.beans.ContaUsuario;
 
 public class UsuarioInexistenteException extends Exception{
 
-    private ContaUsuario conta;
+    private Object conta;
 
-    public UsuarioInexistenteException(ContaUsuario conta) {
+    public UsuarioInexistenteException(Object conta) {
         super("usuaario nao existe no repositorio");
         this.conta = conta;
     }
 
-    public ContaUsuario getConta() {
-        return conta;
+    public Object getConta() {
+       return  conta;
     }
 
-    public void setConta(ContaUsuario conta) {
+    public void setConta(Object conta) {
         this.conta = conta;
     }
     

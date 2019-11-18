@@ -2,23 +2,20 @@
 package projeto2va.negocio.beans;
 
 import java.io.Serializable;
-import java.util.Random;
+
 
 
 public class Produto implements Serializable {
 
     private String nome;
     private float preco;
-    String descricao;
-    long id;
+    String tipo;
+  
     
-    public Produto(String nome, float preco,String descricao) {
+    public Produto(String nome, float preco, String tipo) {
         this.nome = nome;
         this.preco = preco;
-        this.descricao = descricao;
-        Random rand = new Random();
-        this.id = rand.nextLong();
-        
+        this.tipo = tipo;
     }
 
     public String getNome() {
@@ -36,22 +33,9 @@ public class Produto implements Serializable {
     public void setPreco(float preco) {
         this.preco = preco;
     }
-
-    public String getDescricao() {
-        return descricao;
-    }
-
-    public long getId() {
-        return id;
-    }
-
-    public boolean equals(Produto p){
-        boolean b = false;
-        if(p.getNome().equals(this.nome) || p.getId() == this.id)
-            b = true;
-        return b;
-    }
     
-    
+    public String getTipo() {
+        return this.tipo;
+    }
     
 }
